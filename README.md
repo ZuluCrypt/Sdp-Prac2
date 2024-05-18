@@ -2,9 +2,9 @@ good day everyone, welcome to our prac 2. lets get this done as soon as possible
 
 FORMATTING CODE
 ==============================================================
-CODE
+CODE:
 Remove unnecessary whitespaces 
-BRANCH
+BRANCH:
 Preferred Format 
 TASK-#(Student_Number)
 
