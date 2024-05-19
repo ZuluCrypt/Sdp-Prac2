@@ -33,5 +33,29 @@ class AppTest {
         assertNull(result);
     }
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    
+
+        // tests for Task6
+    @Test 
+    void Task6ReturnsEmptyListForEmptyInput() {
+        // arrange
+        SimpleFunctions funcs = new SimpleFunctions();
+        List<Integer> input = new ArrayList<>();
+        List<Integer> expected = new ArrayList<>();
+        // act
+        List<Integer> result = funcs.Task6(input);
+        // assert
+        assertEquals(expected, result);
+    }
+        @Test 
+    void Task6ReturnsCorrectRoundedNumbers() {
+        // arrange
+        SimpleFunctions funcs = new SimpleFunctions();
+        List<Integer> input = List.of(154, 343, 123, 234, 234);
+        List<Integer> expected = List.of(200, 400, 200, 300, 300);
+        // act
+        List<Integer> result = funcs.Task6(input);
+        // assert
+        assertEquals(expected, result);
+    }
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 }
