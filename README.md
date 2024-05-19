@@ -25,8 +25,9 @@ that it builds and actually runs.
 To do:
 1. open gradle-wrapper.properties
 2. edit distributionUrl=https\://services.gradle.org/distributions/gradle-7.5-bin.zip to
-   distributionUrl=https\://services.gradle.org/distributions/gradle-8.7-bin.zip
-3. then run normal ./gradlew build or ./gradlew run command to build
+   distributionUrl=https\://services.gradle.org/distributions/gradle-8.7-bin.zip if you instaled gradle -v 8.7 otherwise use
+   distributionUrl=https\://services.gradle.org/distributions/gradle-8.0._-bin.zip
+4. then run normal ./gradlew build or ./gradlew run command to build
 ================================================================
 
 
