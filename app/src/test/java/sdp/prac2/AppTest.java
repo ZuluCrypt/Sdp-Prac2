@@ -46,27 +46,29 @@ class AppTest {
 
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     //tests for Task4
-    @Test void Task4AddsTwoNumbersfromTwoLists() {
-        //arrange
+    @Test void task4CreatesListOfIntegerMultiples() {
+        // Arrange
         SimpleFunctions funcs = new SimpleFunctions();
-        List<Integer> list1 = List.of(154, 343, 123, 234, 234);
-        List<Integer> list2 = List.of(2, 4, 2, 4, 2);
-        List<Integer> expected = List.of(308, 1372, 246, 936, 468);
-        //act
-        List<Integer> result = funcs.Task4(list1, list2);
-        //assert
+        List<Integer> dataA = List.of(8, 5, 1, 10);
+        List<Integer> dataB = List.of(5, 1, 2, 9);
+        List<Integer> expected = List.of(72, 10, 1, 50);
+        // Act
+        List<Integer> result = funcs.Task4(dataA, dataB);
+        // Assert
         assertEquals(expected, result);
+        
     }
 
-    @Test void Task4ReturnsNullIfListsAreNotEqual() {
-        //arrange
+    @Test void task4ReturnsNullForUnequalListLength() {
+        // Arrange
         SimpleFunctions funcs = new SimpleFunctions();
-        List<Integer> list1 = List.of(154, 343, 123, 234, 234);
-        List<Integer> list2 = List.of(2, 4, 2, 4);
-        //act
-        List<Integer> result = funcs.Task4(list1, list2);
-        //assert
+        List<Integer> dataA = List.of(5, 3, 20, 4);
+        List<Integer> dataB = List.of(14, 2, 9);
+        // Act
+        List<Integer> result = funcs.Task4(dataA, dataB);
+        // Assert
         assertNull(result);
+
     }
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     // tests for task5
