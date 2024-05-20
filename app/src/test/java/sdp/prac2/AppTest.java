@@ -33,29 +33,54 @@ class AppTest {
         assertNull(result);
     }
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    // tests for task5
 
-        // tests for Task6
-    @Test 
-    void Task6ReturnsEmptyListForEmptyInput() {
-        // arrange
+    @Test void Task5sortedListBoolTest(){
+        //arrange
         SimpleFunctions funcs = new SimpleFunctions();
-        List<Integer> input = new ArrayList<>();
-        List<Integer> expected = new ArrayList<>();
-        // act
-        List<Integer> result = funcs.Task6(input);
-        // assert
+        List<Integer> list = List.of(123, 154, 234, 234, 343);
+        Boolean expected = true;
+
+        //act
+        Boolean result = funcs.Task5(list);
+        //assert
         assertEquals(expected, result);
     }
-        @Test 
-    void Task6ReturnsCorrectRoundedNumbers() {
-        // arrange
+    @Test void Task5unsortedListBoolTest(){
+        //arrange
         SimpleFunctions funcs = new SimpleFunctions();
-        List<Integer> input = List.of(154, 343, 123, 234, 234);
-        List<Integer> expected = List.of(200, 400, 200, 300, 300);
-        // act
-        List<Integer> result = funcs.Task6(input);
-        // assert
+        List<Integer> list = List.of(154, 343, 123, 234, 234);
+        Boolean expected = false;
+        //act
+        Boolean result = funcs.Task5(list);
+        //assert
         assertEquals(expected, result);
     }
+
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    //     // tests for Task6
+    // @Test 
+    // void Task6ReturnsEmptyListForEmptyInput() {
+    //     // arrange
+    //     SimpleFunctions funcs = new SimpleFunctions();
+    //     List<Integer> input = new ArrayList<>();
+    //     List<Integer> expected = new ArrayList<>();
+    //     // act
+    //     List<Integer> result = funcs.Task6(input);
+    //     // assert
+    //     assertEquals(expected, result);
+    // }
+    //     @Test 
+    // void Task6ReturnsCorrectRoundedNumbers() {
+    //     // arrange
+    //     SimpleFunctions funcs = new SimpleFunctions();
+    //     List<Integer> input = List.of(154, 343, 123, 234, 234);
+    //     List<Integer> expected = List.of(200, 400, 200, 300, 300);
+    //     // act
+    //     List<Integer> result = funcs.Task6(input);
+    //     // assert
+    //     assertEquals(expected, result);
+    // }
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 }
