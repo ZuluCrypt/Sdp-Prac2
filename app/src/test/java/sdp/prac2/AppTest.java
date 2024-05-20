@@ -46,7 +46,7 @@ class AppTest {
 
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     //tests for Task4
-    @Test void task4CreatesListOfIntegerMultiples() {
+    @Test void Task4CreatesListOfIntegerMultiples() {
         // Arrange
         SimpleFunctions funcs = new SimpleFunctions();
         List<Integer> dataA = List.of(8, 5, 1, 10);
@@ -59,7 +59,7 @@ class AppTest {
         
     }
 
-    @Test void task4ReturnsNullForUnequalListLength() {
+    @Test void Task4ReturnsNullForUnequalListLength() {
         // Arrange
         SimpleFunctions funcs = new SimpleFunctions();
         List<Integer> dataA = List.of(5, 3, 20, 4);
