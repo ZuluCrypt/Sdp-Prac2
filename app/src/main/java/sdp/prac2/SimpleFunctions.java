@@ -4,6 +4,13 @@ import java.util.*;
 
 public class SimpleFunctions {
     public SimpleFunctions() {}
+    //reverse list b and store in reversedList
+    private static List<Integer> reverseList(List<Integer> listToReverse){
+                List<Integer> reversed = new ArrayList<>(); //reverse list variable to store the reversed list
+                for(int i = listToReverse.size()-1; i >= 0; i--){
+                    reversed.add(listToReverse.get(i));
+                }return reversed;
+            }
 
     public static boolean Task5(List<Integer> lst) {
         if (lst.isEmpty()) {
