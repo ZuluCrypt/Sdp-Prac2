@@ -20,7 +20,7 @@ public class SimpleFunctions {
         }else{  //if the two lists are of the same size then add each element in a to the corresponding element in the reversed list of b
             List<Integer> reversedList = reverseList(b); //reverse list b 
             for(int i = 0 ; i < a.size(); i++){
-                result.add(a.get(i) * reversedList.get(i))
+                result.add(a.get(i) * reversedList.get(i));
             }
         }
         return result;     
