@@ -3,35 +3,98 @@
  */
 package sdp.prac2;
 import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// tests for task1
+    @Test
+    void Task1ReturnsZeroForEmptyElementList() {
+        // Arrange
+        SimpleFunctions funcs = new SimpleFunctions();
+        List<Integer> a = new ArrayList<>();
+        List<Integer> b = Arrays.asList(0, 1, 2);
+        int expected = 0;
+
+        // Act
+        int result = funcs.Task1(a, b);
+
+        // Assert
+        assertEquals(expected, result, "Task1 should return 0 when the element list is empty.");
+    }
+
+    @Test
+    void Task1HandlesNegativeIndexes() {
+        // Arrange
+        SimpleFunctions funcs = new SimpleFunctions();
+        List<Integer> a = Arrays.asList(5, 10, 15);
+        List<Integer> b = Arrays.asList(-1, 0, 1);
+        int expected = 5 + 10;  // Index -1 is out-of-range and should be ignored
+
+        // Act
+        int result = funcs.Task1(a, b);
+
+        // Assert
+        assertEquals(expected, result, "Task1 should ignore negative indexes.");
+    }
+}
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     //tests for Task4
-    @Test void Task4AddsTwoNumbersfromTwoLists() {
+    @Test void Task4CreatesListOfIntegerMultiples() {
+        // Arrange
+        SimpleFunctions funcs = new SimpleFunctions();
+        List<Integer> dataA = List.of(8, 5, 1, 10);
+        List<Integer> dataB = List.of(5, 1, 2, 9);
+        List<Integer> expected = List.of(72, 10, 1, 50);
+        // Act
+        List<Integer> result = funcs.Task4(dataA, dataB);
+        // Assert
+        assertEquals(expected, result);
+        
+    }
+
+    @Test void Task4ReturnsNullForUnequalListLength() {
+        // Arrange
+        SimpleFunctions funcs = new SimpleFunctions();
+        List<Integer> dataA = List.of(5, 3, 20, 4);
+        List<Integer> dataB = List.of(14, 2, 9);
+        // Act
+        List<Integer> result = funcs.Task4(dataA, dataB);
+        // Assert
+        assertNull(result);
+
+    }
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    // tests for task5
+
+    @Test void Task5sortedListBoolTest(){
         //arrange
         SimpleFunctions funcs = new SimpleFunctions();
-        List<Integer> list1 = List.of(154, 343, 123, 234, 234);
-        List<Integer> list2 = List.of(2, 4, 2, 4, 2);
-        List<Integer> expected = List.of(308, 1372, 246, 936, 468);
+        List<Integer> list = List.of(123, 154, 234, 234, 343);
+        Boolean expected = true;
+
         //act
-        List<Integer> result = funcs.Task4(list1, list2);
+        Boolean result = funcs.Task5(list);
+        //assert
+        assertEquals(expected, result);
+    }
+    @Test void Task5unsortedListBoolTest(){
+        //arrange
+        SimpleFunctions funcs = new SimpleFunctions();
+        List<Integer> list = List.of(154, 343, 123, 234, 234);
+        Boolean expected = false;
+        //act
+        Boolean result = funcs.Task5(list);
         //assert
         assertEquals(expected, result);
     }
 
-    @Test void Task4ReturnsNullIfListsAreNotEqual() {
-        //arrange
-        SimpleFunctions funcs = new SimpleFunctions();
-        List<Integer> list1 = List.of(154, 343, 123, 234, 234);
-        List<Integer> list2 = List.of(2, 4, 2, 4);
-        //act
-        List<Integer> result = funcs.Task4(list1, list2);
-        //assert
-        assertNull(result);
-    }
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         // tests for Task6
@@ -57,5 +120,5 @@ class AppTest {
         // assert
         assertEquals(expected, result);
     }
-    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-}
+   // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
