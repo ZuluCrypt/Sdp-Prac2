@@ -4,7 +4,7 @@ import java.util.*;
 
 public class SimpleFunctions {
     public SimpleFunctions() {}
-   public static int sumByIndexes(List<Integer> a, List<Integer> b) {
+   public static int Task1(List<Integer> a, List<Integer> b) {
         int sum = 0;
 
         for (int index : b) {
