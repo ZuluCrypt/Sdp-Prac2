@@ -11,7 +11,7 @@ public class SimpleFunctions {
                     reversed.add(listToReverse.get(i));
                 }return reversed;
             }
-
+    //task4
     public static List<Integer> Task4(List<Integer> a, List<Integer> b) {
         List<Integer> result = new ArrayList<>(); //created result variable of type List<integer> to store the result
         //check if the two lists are of the same size
