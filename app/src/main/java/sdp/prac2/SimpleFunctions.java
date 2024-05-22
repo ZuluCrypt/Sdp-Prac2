@@ -35,6 +35,21 @@ public class SimpleFunctions {
                     reversed.add(listToReverse.get(i));
                 }return reversed;
             }
+    //task4
+    public static List<Integer> Task4(List<Integer> a, List<Integer> b) {
+        List<Integer> result = new ArrayList<>(); //created result variable of type List<integer> to store the result
+        //check if the two lists are of the same size
+        if (a.size() != b.size()){
+                return null;
+        }else{  //if the two lists are of the same size then add each element in a to the corresponding element in the reversed list of b
+            List<Integer> reversedList = reverseList(b); //reverse list b 
+            for(int i = 0 ; i < a.size(); i++){
+                result.add(a.get(i) * reversedList.get(i));
+            }
+        }
+        return result;
+    }
+
 
     public static boolean Task5(List<Integer> lst) {
         if (lst.isEmpty()) {
@@ -44,10 +59,11 @@ public class SimpleFunctions {
         for (int i = 0; i < lst.size() - 1; i++) {
             if (lst.get(i) > lst.get(i + 1)) {
                 return false;
-            }
+                }
         }
         return true;
     }
+    
 
     public static List<Integer> Task6(List<Integer> numbers) {
         List<Integer> roundedNumbers = new ArrayList<>();
