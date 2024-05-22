@@ -3,8 +3,7 @@
  */
 package sdp.prac2;
 import java.util.*;
-import java.util.ArrayList;
-import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -44,7 +43,34 @@ class AppTest {
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//Tests for Task 3
+    @Test
+    public void Task3ValidNestedParentheses() {
+        // Arrange
+        SimpleFunctions funcs = new SimpleFunctions();
+        String input = "()(((()(())())))()";
+        boolean T_expected = true;
+        // Act
+        boolean result = funcs.Task3(input);
+        // Assert
+        assertEquals(T_expected, result);
+    }
+
+    @Test
+    public void Task3InvalidNestedParentheses() {
+        // Arrange
+        SimpleFunctions funcs = new SimpleFunctions();
+        String input = "(((()(())))))))(";
+        boolean F_expected = false;
+        // Act
+        boolean result = funcs.Task3(input);
+        // Assert
+        assertEquals(F_expected, result);
+    }
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     //tests for Task4
     @Test void Task4CreatesListOfIntegerMultiples() {
         // Arrange
@@ -105,7 +131,7 @@ class AppTest {
         List<Integer> input = new ArrayList<>();
         List<Integer> expected = new ArrayList<>();
         // act
-        List<Integer> result = funcs.Task6(input);
+        List<Integer> result = funcs.    (input);
         // assert
         assertEquals(expected, result);
     }
