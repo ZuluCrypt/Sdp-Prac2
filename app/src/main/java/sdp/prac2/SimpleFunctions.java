@@ -5,6 +5,18 @@ import java.util.*;
 public class SimpleFunctions {
     public SimpleFunctions() {}
 
+    public static int Task1(List<Integer> a, List<Integer> b) {
+        int sum = 0;
+
+        for (int index : b) {
+            if (index >= 0 && index < a.size()) {
+                sum += a.get(index);
+            }
+        }
+
+        return sum;
+    }
+
     public boolean Task3(String s) {
         // convert to array of characters
         char[] characters = s.toCharArray();
@@ -59,7 +71,7 @@ public class SimpleFunctions {
         for (int i = 0; i < lst.size() - 1; i++) {
             if (lst.get(i) > lst.get(i + 1)) {
                 return false;
-                }
+            }
         }
         return true;
     }
@@ -81,4 +93,5 @@ public class SimpleFunctions {
 
         return roundedNumbers;
     }
+}
 }
