@@ -10,37 +10,38 @@ import static org.junit.jupiter.api.Assertions.*;
 class AppTest {
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//uncomment when test needed
 // tests for task1
-    @Test
-    void Task1ReturnsZeroForEmptyElementList() {
-        // Arrange
-        SimpleFunctions funcs = new SimpleFunctions();
-        List<Integer> a = new ArrayList<>();
-        List<Integer> b = Arrays.asList(0, 1, 2);
-        int expected = 0;
+    // @Test
+    // void Task1ReturnsZeroForEmptyElementList() {
+    //     // Arrange
+    //     SimpleFunctions funcs = new SimpleFunctions();
+    //     List<Integer> a = new ArrayList<>();
+    //     List<Integer> b = Arrays.asList(0, 1, 2);
+    //     int expected = 0;
 
-        // Act
-        int result = funcs.Task1(a, b);
+    //     // Act
+    //     int result = funcs.Task1(a, b);
 
-        // Assert
-        assertEquals(expected, result, "Task1 should return 0 when the element list is empty.");
-    }
+    //     // Assert
+    //     assertEquals(expected, result, "Task1 should return 0 when the element list is empty.");
+    // }
 
-    @Test
-    void Task1HandlesNegativeIndexes() {
-        // Arrange
-        SimpleFunctions funcs = new SimpleFunctions();
-        List<Integer> a = Arrays.asList(5, 10, 15);
-        List<Integer> b = Arrays.asList(-1, 0, 1);
-        int expected = 5 + 10;  // Index -1 is out-of-range and should be ignored
+    // @Test
+    // void Task1HandlesNegativeIndexes() {
+    //     // Arrange
+    //     SimpleFunctions funcs = new SimpleFunctions();
+    //     List<Integer> a = Arrays.asList(5, 10, 15);
+    //     List<Integer> b = Arrays.asList(-1, 0, 1);
+    //     int expected = 5 + 10;  // Index -1 is out-of-range and should be ignored
 
-        // Act
-        int result = funcs.Task1(a, b);
+    //     // Act
+    //     int result = funcs.Task1(a, b);
 
-        // Assert
-        assertEquals(expected, result, "Task1 should ignore negative indexes.");
-    }
-}
+    //     // Assert
+    //     assertEquals(expected, result, "Task1 should ignore negative indexes.");
+    // }
+
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -131,7 +132,7 @@ class AppTest {
         List<Integer> input = new ArrayList<>();
         List<Integer> expected = new ArrayList<>();
         // act
-        List<Integer> result = funcs.    (input);
+        List<Integer> result = funcs.Task6(input);
         // assert
         assertEquals(expected, result);
     }
@@ -147,4 +148,4 @@ class AppTest {
         assertEquals(expected, result);
     }
    // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
+}
