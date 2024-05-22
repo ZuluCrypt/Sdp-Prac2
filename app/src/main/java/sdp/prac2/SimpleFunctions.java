@@ -3,8 +3,7 @@ package sdp.prac2;
 import java.util.*;
 
 public class SimpleFunctions {
-    public SimpleFunctions() {
-    }
+    public SimpleFunctions() {}
 
     public boolean Task3(String s) {
         // convert to array of characters
