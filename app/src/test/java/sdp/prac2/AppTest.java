@@ -7,6 +7,35 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
+    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//Test for Task 2
+@Test
+public void variousStringsTest(){
+    SimpleFunctions fun = new SimpleFunctions();
+    //Arrange
+    List<String> input = Arrays.asList("apple", "mom", "", "s", "si");
+    Lists<String> expectedOutput = Arrays.asList("pple", "om", "s");
+
+    //Act
+    List<String> actualOutput = fun.Task2(input);
+
+    //Assert
+    assertEquals(expectedOutput, actualOutput);
+}
+
+@Test
+public void multipleCharacterStringTest(){
+    SimpleFunctions fun = new SimpleFunctions();
+    //Arrange
+    List<String> input = Arrays.asList("apple", "mom", "mind", "singing", "simpleness");
+    Lists<String> expectedOutput = Arrays.asList("pple", "om", "ind", "inging", "impleness");
+
+    //Act
+    List<String> actualOutput = fun.Task2(input);
+
+    //Assert
+    assertEquals(expectedOutput, actualOutput);
+} 
 
     //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     //tests for Task4
