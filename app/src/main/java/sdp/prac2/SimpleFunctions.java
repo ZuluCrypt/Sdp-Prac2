@@ -17,6 +17,18 @@ public class SimpleFunctions {
         return sum;
     }
 
+    public static List<String> Task2(List<String> lst) {
+        List<String> result = new ArrayList<>();  //this will be the list with the resultant list that has the first character removed
+        for (int i = 0; i < lst.size(); i++) {
+            String updatedElem = lst.get(i);
+            //this checks if the element has anything in it and if not then it removes it from the list
+            if (updatedElem.length() > 0) {
+                //this is where the first character is removed for each element within the list
+                result.add(updatedElem.substring(1));
+            }
+        }
+        return result;
+    }
     public boolean Task3(String s) {
         // convert to array of characters
         char[] characters = s.toCharArray();
